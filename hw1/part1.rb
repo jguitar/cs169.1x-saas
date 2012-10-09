@@ -9,7 +9,11 @@ def palindrome?(str)
 end
 
 def count_words(str)
-  # YOUR CODE HERE
+  result = Hash.new(0)
+  str.downcase.scan(/\w+/i).each do |word|
+    result[word] += 1
+  end
+  result
 end
 
 
@@ -46,23 +50,22 @@ end
 
 
 test_str = "The rent is due on the first day of the month unless the first day of the month falls on a Saturday or Sunday"
-if (count_words test_str) == ""
+if (count_words test_str) == {'the' => 5, 'rent' => 1, 'is' => 1, 'due' => 1, 'on' => 2, 'first' => 2, 'day' => 2, 'of' => 2, 'month' => 2, 'unless' => 1, 'falls' => 1, 'a' => 1, 'saturday' => 1, 'or' => 1, 'sunday' => 1}
   puts 'Ok'
 else
-  puts 'Error'
+  puts('Error' + count_words(test_str).to_s)
 end
 
 test_str = "A man, a plan, a canal -- Panama"
 if (count_words test_str) == {'a' => 3, 'man' => 1, 'canal' => 1, 'panama' => 1, 'plan' => 1}
   puts 'Ok'
 else
-  puts 'Error'
+  puts('Error' + count_words(test_str).to_s)
 end
 
 test_str = "Doo bee doo bee doo"
 if (count_words test_str) == {'doo' => 3, 'bee' => 2}
   puts 'Ok'
 else
-  puts 'Error'
+  puts('Error' + count_words(test_str).to_s)
 end
-
