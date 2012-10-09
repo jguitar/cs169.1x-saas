@@ -27,9 +27,9 @@ end
 test_str = "Madam, I'm Adam"
 
 if palindrome? test_str
-  puts test_str " is a palindrome!"
+  puts test_str + " is a palindrome!"
 else
-  puts test_str " is NOT a palindrome!"
+  puts test_str + " is NOT a palindrome!"
 end
 
 
