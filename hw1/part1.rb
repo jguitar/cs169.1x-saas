@@ -16,24 +16,52 @@ end
 
 
 test_str = "there goes the neighborhood"
-
 if palindrome? test_str
-  puts test_str + " is a palindrome!"
+  puts 'Error'
 else
-  puts test_str + " is NOT a palindrome!"
+  puts 'Ok'
 end
 
-
-test_str = "Madam, I'm Adam"
-
+test_str = "Madam, I'm Adam!"
 if palindrome? test_str
-  puts test_str + " is a palindrome!"
+  puts 'Ok'
 else
-  puts test_str + " is NOT a palindrome!"
+  puts 'Error'
+end
+
+test_str = "A man, a plan, a canal -- Panama"
+if palindrome? test_str
+  puts 'Ok'
+else
+  puts 'Error'
+end
+
+test_str = "Abracadabra"
+if palindrome? test_str
+  puts 'Error'
+else
+  puts 'Ok'
 end
 
 
 test_str = "The rent is due on the first day of the month unless the first day of the month falls on a Saturday or Sunday"
+if (count_words test_str) == ""
+  puts 'Ok'
+else
+  puts 'Error'
+end
 
-word_count = count_words test_str
-puts word_count
+test_str = "A man, a plan, a canal -- Panama"
+if (count_words test_str) == {'a' => 3, 'man' => 1, 'canal' => 1, 'panama' => 1, 'plan' => 1}
+  puts 'Ok'
+else
+  puts 'Error'
+end
+
+test_str = "Doo bee doo bee doo"
+if (count_words test_str) == {'doo' => 3, 'bee' => 2}
+  puts 'Ok'
+else
+  puts 'Error'
+end
+
