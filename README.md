@@ -1,4 +1,5 @@
-cs169.1x-saas
-=============
+# CS169.1x Software as a Service
 
-CS169.1x Software as a Service (www.edx.org)
+https://www.edx.org/courses/BerkeleyX/CS169.1x/2012_Fall/info
+
+Homework and exercises
