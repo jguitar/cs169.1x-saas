@@ -4,7 +4,8 @@
 
 
 def palindrome?(str)
-  # YOUR CODE HERE
+  only_letters = str.gsub(/\W/, '').downcase
+  only_letters == only_letters.reverse
 end
 
 def count_words(str)
