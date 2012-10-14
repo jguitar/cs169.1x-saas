@@ -28,7 +28,7 @@ end
 
 module Enumerable
   def palindrome?
-    self == reverse
+    self == reverse if respond_to? :reverse
   end
 end
 
@@ -117,6 +117,19 @@ else
 end
 
 unless [1, 4, 3, 2, 1].palindrome?
+  puts 'ok'
+else
+  puts 'error'
+end
+
+
+unless {"hello"=> "world"}.palindrome?
+  puts 'ok'
+else
+  puts 'error'
+end
+
+unless (1..2).palindrome?
   puts 'ok'
 else
   puts 'error'
