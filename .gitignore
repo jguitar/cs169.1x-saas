@@ -14,3 +14,14 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
+
+\#*\#
+*~
+TAGS
+db/schema.rb
+log/
+db/*.sqlite3
+tmp/
+
+# bundler state
+/vendor/bundle/
