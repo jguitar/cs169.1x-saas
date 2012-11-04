@@ -60,21 +60,21 @@ else
 end
 
 val = 1.dollar.in(:rupees)
-if val.to_s == '52.6315789473684'
+if val.to_s == '52.631578947368425'
   puts 'ok'
 else
   puts 'error' + val.to_s
 end
 
 val = 10.rupees.in(:euro)
-if val.to_s == '0.147058823529412'
+if val.to_s == '0.14705882352941177'
   puts 'ok'
 else
   puts 'error' + val.to_s
 end
 
 val = 1.dollar.in(:euros)
-if val.to_s == '0.773993808049536'
+if val.to_s == '0.7739938080495355'
   puts 'ok'
 else
   puts 'error' + val.to_s
