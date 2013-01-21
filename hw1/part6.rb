@@ -28,10 +28,10 @@ end
 
 module Enumerable
   def palindrome?
-    self == reverse if respond_to? :reverse
+    return false if self.class == Hash
+    self.to_a == self.to_a.reverse
   end
 end
-
 
 # test
 if 1.euro == 1.292
@@ -130,6 +130,12 @@ else
 end
 
 unless (1..2).palindrome?
+  puts 'ok'
+else
+  puts 'error'
+end
+
+if ('a'..'a').palindrome?
   puts 'ok'
 else
   puts 'error'
